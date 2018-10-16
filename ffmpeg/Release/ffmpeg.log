@@ -1,0 +1,15 @@
+﻿生成启动时间为 2018/9/22 13:31:10。
+     1>项目“G:\wcl\CSharp\ROS.NET-master\ffmpeg\ffmpeg.vcxproj”在节点 2 上(Build 个目标)。
+     1>Link:
+         D:\soft\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\wcl\CSharp\ROS.NET-master\Release\hfffmpeg.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\wcl\CSharp\ROS.NET-master\Release\hfffmpeg.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\wcl\CSharp\ROS.NET-master\Release\hfffmpeg.lib" /MACHINE:X86 /SAFESEH  /SAFESEH:NO /DLL Release\dllmain.obj
+         Release\ffmpeg.obj
+         Release\stdafx.obj
+            正在创建库 G:\wcl\CSharp\ROS.NET-master\Release\hfffmpeg.lib 和对象 G:\wcl\CSharp\ROS.NET-master\Release\hfffmpeg.exp
+         正在生成代码
+         已完成代码的生成
+         ffmpeg.vcxproj -> G:\wcl\CSharp\ROS.NET-master\Release\hfffmpeg.dll
+     1>已完成生成项目“G:\wcl\CSharp\ROS.NET-master\ffmpeg\ffmpeg.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.77

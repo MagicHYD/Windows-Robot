@@ -1,0 +1,107 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EOD_robot"
+        xmlns:ROS_ImageWPF="clr-namespace:ROS_ImageWPF;assembly=ROS_ImageWPF" x:Class="EOD_robot.MainWindow"
+        mc:Ignorable="d" Loaded="Window_Loaded" 
+        Title="MainWindow" Height="1200" Width="1920">
+    <Grid>
+
+        <Image x:Name="img_background" Source="1/排爆界面_画板 1.jpg" Stretch="Fill" Grid.ColumnSpan="3">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="1/排爆界面_画板-1_02.jpg"/>
+            </Image.OpacityMask>
+        </Image>
+
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="103,73,0,0" VerticalAlignment="Top" Width="206" x:Name="TestImage1" MouseDoubleClick="ImageMouseDoubleClick" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="999">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam2/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="309,73,0,0" VerticalAlignment="Top" Width="206" x:Name="TestImage2" MouseDoubleClick="ImageMouseDoubleClick" Panel.ZIndex="999" RenderTransformOrigin="0.5,0.5">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam3/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="515,73,0,0" VerticalAlignment="Top" Width="206" x:Name="TestImage3" MouseDoubleClick="ImageMouseDoubleClick" Panel.ZIndex="999" RenderTransformOrigin="0.5,0.5">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam4/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="515,277,0,0" VerticalAlignment="Top" Width="206" x:Name="TestImage6" MouseDoubleClick="ImageMouseDoubleClick" Panel.ZIndex="999" RenderTransformOrigin="0.5,0.5">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam5/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="309,277,0,0" VerticalAlignment="Top" Width="206" x:Name="TestImage5" MouseDoubleClick="ImageMouseDoubleClick" Panel.ZIndex="999" RenderTransformOrigin="0.5,0.5">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam6/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="103,277,0,0" VerticalAlignment="Top" Width="210" x:Name="TestImage4" MouseDoubleClick="ImageMouseDoubleClick" Panel.ZIndex="999" RenderTransformOrigin="0.5,0.5">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+
+        <Grid x:Name="grid_button" Grid.ColumnSpan="3">
+            <Button x:Name="btnPlayVoide" Content="" HorizontalAlignment="Left" Margin="1174,0,0,0" VerticalAlignment="Top" Width="88" Height="90">
+                <Button.Background>
+                    <ImageBrush ImageSource="1/排爆界面_画板-1_02.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnUp" Content="" HorizontalAlignment="Left" Margin="1489,296,0,0" VerticalAlignment="Top" Width="199" Height="75">
+                <Button.Background>
+                    <ImageBrush ImageSource="1/排爆界面_画板-1_06.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnLeft" Content="" HorizontalAlignment="Left" Margin="1325,243,0,0" VerticalAlignment="Top" Width="78" Height="166" >
+                <Button.Background>
+                    <ImageBrush ImageSource="1/排爆界面_画板-1_10.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnRight" Content="" HorizontalAlignment="Left" Margin="1716,416,0,0" VerticalAlignment="Top" Width="76" Height="166" >
+                <Button.Background>
+                    <ImageBrush ImageSource="1/排爆界面_画板-1_13.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnDown" Content="" HorizontalAlignment="Left" Margin="1489,622,0,0" VerticalAlignment="Top" Width="199" Height="72" >
+                <Button.Background>
+                    <ImageBrush ImageSource="1/排爆界面_画板-1_17.jpg"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

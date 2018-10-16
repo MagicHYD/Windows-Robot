@@ -1,0 +1,33 @@
+﻿<Window x:Class="CompressedImageView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:RosImageWpf="clr-namespace:ROS_ImageWPF;assembly=ROS_ImageWPF"
+        MinHeight="480"
+        MinWidth="640"
+        Title="MainWindow" Loaded="Window_Loaded" Height="569" Width="435">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <RosImageWpf:CompressedImageControl x:FieldModifier="public" Topic="/usb_cam2/image_raw/compressed" x:Name="TestImage2" Grid.Row="0" Grid.Column="1"></RosImageWpf:CompressedImageControl>
+        <RosImageWpf:CompressedImageControl x:FieldModifier="public" Topic="/usb_cam3/image_raw/compressed" x:Name="TestImage3" Grid.Row="0" Grid.Column="2"></RosImageWpf:CompressedImageControl>
+        <Button x:Name="bt1" Click="_1" Grid.Row="1" Grid.Column="0">Reset</Button>
+        <Button x:Name="bt2" Click="_2" Grid.Row="1" Grid.Column="1">Reset</Button>
+        <Button x:Name="bt3" Click="_3" Grid.Row="1" Grid.Column="2" Content="Reset"/>
+        <RosImageWpf:CompressedImageControl x:FieldModifier="public" Topic="/usb_cam4/image_raw/compressed" x:Name="TestImage4" Grid.Row="2" Grid.Column="0"></RosImageWpf:CompressedImageControl>
+        <RosImageWpf:CompressedImageControl x:FieldModifier="public" Topic="/usb_cam5/image_raw/compressed" x:Name="TestImage5" Grid.Row="2" Grid.Column="1"></RosImageWpf:CompressedImageControl>
+        <RosImageWpf:CompressedImageControl x:FieldModifier="public" Topic="/usb_cam6/image_raw/compressed" x:Name="TestImage6" Grid.Row="2" Grid.Column="2" Height="250" VerticalAlignment="Top"></RosImageWpf:CompressedImageControl>
+        <Button x:Name="bt4" Click="_4" Grid.Row="3" Grid.Column="0">Reset</Button>
+        <Button x:Name="bt5" Click="_5" Grid.Row="3" Grid.Column="1" Height="19" VerticalAlignment="Bottom">Reset</Button>
+        <Button x:Name="bt6" Click="_6" Grid.Row="3" Grid.Column="2">Reset</Button>
+        <RosImageWpf:CompressedImageControl MouseLeftButtonUp="_click_001" x:FieldModifier="public" Topic="/usb_cam/image_raw/compressed" x:Name="TestImage1" Grid.Row="0" Grid.Column="0" Loaded="TestImage1_Loaded"/>
+    </Grid>
+</Window>

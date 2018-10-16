@@ -1,0 +1,1105 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EOD_robot"
+        xmlns:ROS_ImageWPF="clr-namespace:ROS_ImageWPF;assembly=ROS_ImageWPF" x:Class="EOD_robot.Window6"
+        mc:Ignorable="d" Loaded="Window_Loaded"
+        Title="Window6" Height="912" Width="1368">
+    <Grid>
+        <!--<ROS_ImageWPF:CompressedImageControl Topic="/usb_cam/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="10,202,0,0" VerticalAlignment="Top" Width="419" Name="TestImage1" MouseDoubleClick="ImageMouseDoubleClick"/>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam2/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="434,156,0,0" VerticalAlignment="Top" Width="419" Name="TestImage2" MouseDoubleClick="ImageMouseDoubleClick"/>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam3/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="843,156,0,0" VerticalAlignment="Top" Width="419" Name="TestImage3" MouseDoubleClick="ImageMouseDoubleClick"/>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam4/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="0,514,0,0" VerticalAlignment="Top" Width="419" Name="TestImage4" MouseDoubleClick="ImageMouseDoubleClick"/>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam5/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="879,575,0,0" VerticalAlignment="Top" Width="419" Name="TestImage5" MouseDoubleClick="ImageMouseDoubleClick"/>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam6/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="455,647,0,0" VerticalAlignment="Top" Width="419" Name="TestImage6" MouseDoubleClick="ImageMouseDoubleClick"/>-->
+        <!--<Image Source="/6/运动模式界面_画板 1.png" HorizontalAlignment="Left" Height="882" Margin="0,0,-8,-1" VerticalAlignment="Top" Width="1368" Panel.ZIndex="-13"/>-->
+
+        <!--<ROS_ImageWPF:CompressedImageControl Topic="/usb_cam/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="10,202,0,0" VerticalAlignment="Top" Width="419" Name="TestImage1" MouseDoubleClick="ImageMouseDoubleClick"/>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam2/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="434,156,0,0" VerticalAlignment="Top" Width="419" Name="TestImage2" MouseDoubleClick="ImageMouseDoubleClick"/>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam3/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="843,156,0,0" VerticalAlignment="Top" Width="419" Name="TestImage3" MouseDoubleClick="ImageMouseDoubleClick"/>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam4/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="0,514,0,0" VerticalAlignment="Top" Width="419" Name="TestImage4" MouseDoubleClick="ImageMouseDoubleClick"/>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam5/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="879,575,0,0" VerticalAlignment="Top" Width="419" Name="TestImage5" MouseDoubleClick="ImageMouseDoubleClick"/>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam6/image_raw/compressed" HorizontalAlignment="Left" Height="419" Margin="455,647,0,0" VerticalAlignment="Top" Width="419" Name="TestImage6" MouseDoubleClick="ImageMouseDoubleClick"/>-->
+        <Button Content="cunchu" HorizontalAlignment="Left" Margin="368,491,0,290" VerticalAlignment="Center" Click="cunchu" Width="85" Height="100" Panel.ZIndex="1" >
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/cunchu.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/cunchu.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/cunchu_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/cunchu.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="zhuaquzhongwu" HorizontalAlignment="Left" Margin="478,596,0,0" VerticalAlignment="Top" Width="87" Height="100" Click="zhuaquzhongwu">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/zhuaquzhongwu.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/zhuaquzhongwu.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/zhuaquzhongwu_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/zhuaquzhongwu.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="Yuyin" HorizontalAlignment="Left" Margin="480,491,0,290" Click="Yuyin" VerticalAlignment="Center" Width="85" Height="100" RenderTransformOrigin="-0.05,0.519" Panel.ZIndex="1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/yuyin.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/yuyin.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/yuyin_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/yuyin.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="panpataijie" HorizontalAlignment="Left" Margin="478,771,0,0" Click="panpataijie" VerticalAlignment="Top" Width="87" Height="100" RenderTransformOrigin="1.488,1.945">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/panpataijie.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/panpataijie.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/panpataijie_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/panpataijie.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="tingzhi" HorizontalAlignment="Left" Margin="246,491,0,290" VerticalAlignment="Center" Click="tingzhi" Width="85" Height="100" RenderTransformOrigin="1.488,1.945" Panel.ZIndex="1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/tingzhi.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/tingzhi.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/tingzhi_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/tingzhi.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="yijianhuishou" HorizontalAlignment="Left" Margin="598,678,0,0" VerticalAlignment="Top" Width="87" Height="100" Click="yijianhuishou">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/yijianhuishou.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/yijianhuishou.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/yijianhuishou_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/yijianhuishou.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="zidingyi" HorizontalAlignment="Left" Margin="598,771,0,0" VerticalAlignment="Top" Width="87" Height="100" Click="zidingyi">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/6/zidingyi.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/6/zidingyi.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/6/zidingyi_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/6/zidingyi.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="yundongmoshi" HorizontalAlignment="Left" VerticalAlignment="Top" Width="102" Height="73" Click="yundongmoshi">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/6/yundongmoshi.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/6/yundongmoshi.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/6/yundongmoshi_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/6/yundongmoshi.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="zhankai" HorizontalAlignment="Left" Margin="478,678,0,0" VerticalAlignment="Top" Width="87" Height="100" Click="zhankai" RenderTransformOrigin="0.567,0.718">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/zhankai.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/zhankai.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/zhankai_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/zhankai.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="jiaquzhaoming" HorizontalAlignment="Left" Margin="-2,706,0,0" VerticalAlignment="Top" Width="103" Height="76" Click="jiaquzhaoming" RenderTransformOrigin="0.567,0.718">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/jiaquzhaoming.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/jiaquzhaoming.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/jiaquzhaoming_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/jiaquzhaoming.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="houzhaoming" HorizontalAlignment="Left" Margin="-1,630,0,0" VerticalAlignment="Top" Width="103" Height="76" Click="houzhaoming" RenderTransformOrigin="0.567,0.718">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/houzhaoming.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/houzhaoming.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/houzhaoming_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/houzhaoming.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="he" HorizontalAlignment="Left" Margin="740,212,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="He_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" Panel.ZIndex="2">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/he.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/he.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/he_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/he.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="kai" HorizontalAlignment="Left" Margin="740,382,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.625,1.348" Height="40" Width="40" PreviewMouseDown="Kai_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" Panel.ZIndex="2">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/kai.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/kai.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/kai_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/kai.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="jixiezhua_zuoxuan" HorizontalAlignment="Left" Margin="916,287,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="jixiezhua_zuoxuan_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" RenderTransformOrigin="0.625,1.348" Panel.ZIndex="2">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/zuoxuan.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/zuoxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/zuoxuan_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/zuoxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="wan_shang" HorizontalAlignment="Left" Margin="947,117,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="wan_shang_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" Panel.ZIndex="1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/shang.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/shang.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/shang_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/shang.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="xiaobi_s" HorizontalAlignment="Left" Margin="999,327,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="xiaobi_s_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" Panel.ZIndex="1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/xiaobi_s.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/xiaobi_s.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/xiaobi_s_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/xiaobi_s.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="xiaobi_x" HorizontalAlignment="Left" Margin="1014,406,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="xiaobi_x_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" Panel.ZIndex="1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/xiaobi_x.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/xiaobi_x.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/xiaobi_x_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/xiaobi_x.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="dabi_shang" HorizontalAlignment="Left" Margin="927,558,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="dabi_shang_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" RenderTransformOrigin="0.283,0.097" Panel.ZIndex="1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/shang.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/shang.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/shang_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/shang.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="dabi_xia" HorizontalAlignment="Left" Margin="1072,558,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="dabi_xia_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" Panel.ZIndex="1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/xia.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/xia.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/xia_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/xia.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Button Content="jixiezhua_youxuan" HorizontalAlignment="Left" Margin="862,195,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="jixiezhua_youxuan_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" Panel.ZIndex="2" RenderTransformOrigin="0.058,0.439">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/youxuan.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/youxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/youxuan_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/youxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="wan_xia" HorizontalAlignment="Left" Margin="1052,195,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="wan_xia_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" Panel.ZIndex="1" RenderTransformOrigin="0.23,-3">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/xia.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/xia.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/xia_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/xia.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="youxuan" HorizontalAlignment="Left" Margin="935,618,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="youxuan_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" Panel.ZIndex="5" RenderTransformOrigin="0.5,0.333">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/youxuan.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/youxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/youxuan_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/youxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="zuoxuan" HorizontalAlignment="Left" Margin="1072,618,0,0" VerticalAlignment="Top" Width="40" Height="40
+                " PreviewMouseDown="zuoxuan_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" Panel.ZIndex="1" RenderTransformOrigin="1.6,2.807">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/zuoxuan.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/zuoxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/zuoxuan_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/zuoxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Button Content="yunsuqianjin" HorizontalAlignment="Left" Margin="598,596,0,0" VerticalAlignment="Top" Width="87" Height="100" Click="yunsuqianjin">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/yunsuqianjin.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/yunsuqianjin.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/yunsuqianjin_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/yunsuqianjin.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Image Source="/6/caokongqu.png" HorizontalAlignment="Left" Height="88" Margin="727,0,0,0" VerticalAlignment="Top" Width="633"/>
+        <Image Source="/6/anniubeijing.png" HorizontalAlignment="Left" Height="813" Margin="727,73,0,-5" VerticalAlignment="Top" Width="633"/>
+        <Image Source="/6/quanjingkeshi.png" HorizontalAlignment="Left" Height="87" Margin="102,0,0,0" VerticalAlignment="Top" Width="619"/>
+        <Image Source="/6/shipinxiamian.png" Margin="103,479,0,280" HorizontalAlignment="Left" VerticalAlignment="Center" Height="122" Width="618" Panel.ZIndex="-1"/>
+        <Button Content="youyou" HorizontalAlignment="Left" Margin="331,695,0,0" VerticalAlignment="Top" Width="90" Height="100" PreviewMouseDown="youyou_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/6/youyou.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/6/youyou.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/6/youyou_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/6/youyou.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="zuozuo" HorizontalAlignment="Left" Margin="151,695,0,0" VerticalAlignment="Top" Width="90" Height="100" PreviewMouseDown="zuozuo_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" RenderTransformOrigin="-1.48,2.227">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/6/zuozuo.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/6/zuozuo.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/6/zuozuo_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/6/zuozuo.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="xiaxia" HorizontalAlignment="Left" Margin="241,786,0,-5" VerticalAlignment="Top" Width="90" Height="100" PreviewMouseDown="xiaxia_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/6/xiaxia.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/6/xiaxia.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/6/xiaxia_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/6/xiaxia.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="shangshang" HorizontalAlignment="Left" Margin="241,600,0,0" VerticalAlignment="Top" Width="90" Height="100" PreviewMouseDown="shangshang_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/6/shangshang.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/6/shangshang.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/6/shangshang_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/6/shangshang.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="kaiguan" HorizontalAlignment="Left" Margin="-2,468,0,0" VerticalAlignment="Top" Width="103" Height="76" Click="kaiguan" RenderTransformOrigin="0.567,0.718">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/kaiguan.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/kaiguan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/kaiguan_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/kaiguan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="qianzhaoming" HorizontalAlignment="Left" Margin="-2,549,0,0" VerticalAlignment="Top" Width="103" Height="76" Click="qianzhaoming" RenderTransformOrigin="0.567,0.718">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="6/qianzhaoming.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/qianzhaoming.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/qianzhaoming_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/qianzhaoming.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Image Source="4/dengguang.png" HorizontalAlignment="Left" Height="475" Margin="-2,406,0,0" VerticalAlignment="Top" Width="109" Panel.ZIndex="-1"/>
+        <Button Content="quanjingzhaoming" HorizontalAlignment="Left" Margin="-2,787,0,0" VerticalAlignment="Top" Width="103" Height="76" Click="quanjingzhaoming" RenderTransformOrigin="0.567,0.718">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/quanjingzhaoming.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/quanjingzhaoming.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/quanjingzhaoming_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/quanjingzhaoming.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="luzhi" HorizontalAlignment="Left" Margin="138,491,0,290" Click="luzhi" VerticalAlignment="Center" Width="85" Height="100"  RenderTransformOrigin="1.488,1.945" Panel.ZIndex="1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/luzhi.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/luzhi.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/luzhi_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/luzhi.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="shipinku" HorizontalAlignment="Left" Margin="600,491,0,290" VerticalAlignment="Center" Width="85" Height="100" RenderTransformOrigin="-0.05,0.519" Panel.ZIndex="1" Click="shipinku">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/shipinku.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/shipinku.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/shipinku_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/shipinku.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="baibi_shang" HorizontalAlignment="Left" Margin="808,629,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="baibi_shang_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/shang.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/shang.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/shang_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/shang.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="baibi_xia" HorizontalAlignment="Left" Margin="808,716,0,0" VerticalAlignment="Top" Width="40" Height="40" PreviewMouseDown="baibi_xia_PreviewMouseDown" PreviewMouseUp="Button_PreviewMouseUp" Panel.ZIndex="1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/xia.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/xia.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/xia_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/xia.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="yuntai-shang" HorizontalAlignment="Left" Margin="1195,441,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="yuntai_shang" Panel.ZIndex="1" RenderTransformOrigin="0.515,0.611">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/shang.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/shang.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/shang_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/shang.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="yuntai-xia" HorizontalAlignment="Left" Margin="1297,440,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="yuntai_xia" Panel.ZIndex="1" RenderTransformOrigin="-1.462,2.878">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/xia.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/xia.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/xia_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/xia.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="yuntai-zuoxuan" HorizontalAlignment="Left" Margin="1297,531,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="yuntai_zuoxuan" Panel.ZIndex="1">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/zuoxuan.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/zuoxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/zuoxuan_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/zuoxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="yuntai-youxuan" HorizontalAlignment="Left" Margin="1195,532,0,0" VerticalAlignment="Top" Width="40" Height="40" Click="yuntai_youxuan" Panel.ZIndex="3" RenderTransformOrigin="1.143,1.107">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="/4/youxuan.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/youxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/youxuan_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/youxuan.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Image Source="/4/sudu.png" HorizontalAlignment="Left" Height="333" Margin="-2,73,0,0" VerticalAlignment="Top" Width="109"/>
+        <Image Source="/6/yuan.png" Stretch="Fill" Margin="214,673,0,0" Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="143" Width="144"/>
+        <Button Content="disu" HorizontalAlignment="Left" Margin="-1,140,0,0" VerticalAlignment="Top" Width="103" Height="77" Click="disu" RenderTransformOrigin="0.567,0.718">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/disu.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/disu.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/disu_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/disu.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="gaosu" HorizontalAlignment="Left" Margin="0,299,0,0" VerticalAlignment="Top" Width="103" Height="77" Click="gaosu" RenderTransformOrigin="0.567,0.718">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/gaosu.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/gaosu.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/gaosu_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/gaosu.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="zhongsu" HorizontalAlignment="Left" Margin="0,217,0,0" VerticalAlignment="Top" Width="103" Height="77" Click="zhongsu" RenderTransformOrigin="0.567,0.718">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Image x:Name="btnbg" Source="4/zhongsu.png" />
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Source"  Value="/4/zhongsu.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter Property="Source" Value="/4/zhongsu_.png" TargetName="btnbg" />
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Source" Value="/4/zhongsu.png" TargetName="btnbg" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="103,73,0,0" VerticalAlignment="Top" Width="206" x:Name="TestImage1" MouseDoubleClick="ImageMouseDoubleClick" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="999">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam2/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="309,73,0,0" VerticalAlignment="Top" Width="206" x:Name="TestImage2" MouseDoubleClick="ImageMouseDoubleClick" Panel.ZIndex="999" RenderTransformOrigin="0.5,0.5">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam3/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="515,73,0,0" VerticalAlignment="Top" Width="206" x:Name="TestImage3" MouseDoubleClick="ImageMouseDoubleClick" Panel.ZIndex="999" RenderTransformOrigin="0.5,0.5">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam4/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="515,277,0,0" VerticalAlignment="Top" Width="206" x:Name="TestImage6" MouseDoubleClick="ImageMouseDoubleClick" Panel.ZIndex="999" RenderTransformOrigin="0.5,0.5">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam5/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="309,277,0,0" VerticalAlignment="Top" Width="206" x:Name="TestImage5" MouseDoubleClick="ImageMouseDoubleClick" Panel.ZIndex="999" RenderTransformOrigin="0.5,0.5">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+        <ROS_ImageWPF:CompressedImageControl Topic="/usb_cam6/image_raw/compressed" HorizontalAlignment="Left" Height="204" Margin="103,277,0,0" VerticalAlignment="Top" Width="210" x:Name="TestImage4" MouseDoubleClick="ImageMouseDoubleClick" Panel.ZIndex="999" RenderTransformOrigin="0.5,0.5">
+            <ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ROS_ImageWPF:CompressedImageControl.LayoutTransform>
+        </ROS_ImageWPF:CompressedImageControl>
+    </Grid>
+</Window>

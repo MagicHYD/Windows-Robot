@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45ED210C-4771-4618-9F95-B61EB9211B70}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EOD_robot</RootNamespace>
+    <AssemblyName>EOD_robot</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Messages">
+      <HintPath>..\Messages\Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet">
+      <HintPath>.\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>.\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectInput">
+      <HintPath>.\SharpDX.DirectInput.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CommFunction.cs" />
+    <Compile Include="FtpUpDown.cs" />
+    <Compile Include="VoicePlay.cs" />
+    <Compile Include="Window4.xaml.cs">
+      <DependentUpon>Window4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window6.xaml.cs">
+      <DependentUpon>Window6.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Window4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ROS_Comm\ROS_C-Sharp.csproj">
+      <Project>{d3688c9b-26ca-498b-a142-68f8050a590a}</Project>
+      <Name>ROS_C-Sharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ROS_ImageUtils\ROS_ImageWPF.csproj">
+      <Project>{E0E04AFE-E2CF-4A04-A331-76FE05DCC749}</Project>
+      <Name>ROS_ImageWPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XmlRpc_Wrapper\XmlRpc_Wrapper.csproj">
+      <Project>{31a64faa-cc90-4549-a028-752002015e2c}</Project>
+      <Name>XmlRpc_Wrapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1\排爆界面_画板 1.jpg" />
+    <Resource Include="1\排爆界面_画板-1_02.jpg" />
+    <Resource Include="1\排爆界面_画板-1_06.jpg" />
+    <Resource Include="1\排爆界面_画板-1_10.jpg" />
+    <Resource Include="1\排爆界面_画板-1_13.jpg" />
+    <Resource Include="1\排爆界面_画板-1_17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="4\caokong.png" />
+    <Resource Include="4\caokongqu.png" />
+    <Resource Include="4\cunchu.png" />
+    <Resource Include="4\cunchu_.png" />
+    <Resource Include="4\dengguang_.png" />
+    <Resource Include="4\denggung.png" />
+    <Resource Include="4\jixiezhua.png" />
+    <Resource Include="4\jixiezhua_he.png" />
+    <Resource Include="4\jixiezhua_he_.png" />
+    <Resource Include="4\jixiezhua_kai.png" />
+    <Resource Include="4\jixiezhua_kai_.png" />
+    <Resource Include="4\jixiezhua_youxuan.png" />
+    <Resource Include="4\jixiezhua_youxuan_.png" />
+    <Resource Include="4\jixiezhua_zuoxuan.png" />
+    <Resource Include="4\jixiezhua_zuoxuan_.png" />
+    <Resource Include="4\luzhi.png" />
+    <Resource Include="4\panpataijie.png" />
+    <Resource Include="4\panpataijie_.png" />
+    <Resource Include="4\quanjingkeshi.png" />
+    <Resource Include="4\shang.png" />
+    <Resource Include="4\shang_.png" />
+    <Resource Include="4\shipinqu_4.png" />
+    <Resource Include="4\shipinqu_4_.png" />
+    <Resource Include="4\shipinxiamian.png" />
+    <Resource Include="4\sudu.png" />
+    <Resource Include="4\sudu_.png" />
+    <Resource Include="4\tingzhi.png" />
+    <Resource Include="4\xia.png" />
+    <Resource Include="4\xia_.png" />
+    <Resource Include="4\yijianhuishou.png" />
+    <Resource Include="4\yijianhuishou_.png" />
+    <Resource Include="4\youkai.png" />
+    <Resource Include="4\youkai_.png" />
+    <Resource Include="4\youxuan.png" />
+    <Resource Include="4\youxuan_.png" />
+    <Resource Include="4\yunsuqianjin.png" />
+    <Resource Include="4\yunsuqianjin_.png" />
+    <Resource Include="4\yuntai-shang.png" />
+    <Resource Include="4\yuntai-shang_.png" />
+    <Resource Include="4\yuntai-xia.png" />
+    <Resource Include="4\yuntai-xia_.png" />
+    <Resource Include="4\yuntai-youxuan.png" />
+    <Resource Include="4\yuntai-youxuan_.png" />
+    <Resource Include="4\yuntai-zuoxuan.png" />
+    <Resource Include="4\yuntai-zuoxuan_.png" />
+    <Resource Include="4\yuntai.png" />
+    <Resource Include="4\yuyin.png" />
+    <Resource Include="4\yuyin_.png" />
+    <Resource Include="4\zhankai.png" />
+    <Resource Include="4\zhankai_.png" />
+    <Resource Include="4\zhanshitu_4.png" />
+    <Resource Include="4\zhuaqumoshi.png" />
+    <Resource Include="4\zhuaqumoshi_.png" />
+    <Resource Include="4\zhuaquzhongwu.png" />
+    <Resource Include="4\zhuaquzhongwu_.png" />
+    <Resource Include="4\zuobian.png" />
+    <Resource Include="4\zuokai.png" />
+    <Resource Include="4\zuokai_.png" />
+    <Resource Include="4\zuoxuan.png" />
+    <Resource Include="4\zuoxuan_.png" />
+    <Resource Include="4\抓取模式界面.png" />
+    <Resource Include="4\抓取模式界面_画板 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="6\caokong.png" />
+    <Resource Include="6\caokongqu.png" />
+    <Resource Include="6\cunchu.png" />
+    <Resource Include="6\cunchu_.png" />
+    <Resource Include="6\dengguang_.png" />
+    <Resource Include="6\denggung.png" />
+    <Resource Include="6\jixiezhua.png" />
+    <Resource Include="6\jixiezhua_he.png" />
+    <Resource Include="6\jixiezhua_he_.png" />
+    <Resource Include="6\jixiezhua_kai.png" />
+    <Resource Include="6\jixiezhua_kai_.png" />
+    <Resource Include="6\jixiezhua_youxuan.png" />
+    <Resource Include="6\jixiezhua_youxuan_.png" />
+    <Resource Include="6\jixiezhua_zuoxuan.png" />
+    <Resource Include="6\jixiezhua_zuoxuan_.png" />
+    <Resource Include="6\luzhi.png" />
+    <Resource Include="6\panpataijie.png" />
+    <Resource Include="6\panpataijie_.png" />
+    <Resource Include="6\quanjingkeshi.png" />
+    <Resource Include="6\shang.png" />
+    <Resource Include="6\shangshang.png" />
+    <Resource Include="6\shangshang_.png" />
+    <Resource Include="6\shang_.png" />
+    <Resource Include="6\shipinqu_6.png" />
+    <Resource Include="6\shipinqu_6_.png" />
+    <Resource Include="6\shipinxiamian.png" />
+    <Resource Include="6\sudu.png" />
+    <Resource Include="6\sudu_.png" />
+    <Resource Include="6\tingzhi.png" />
+    <Resource Include="6\xia.png" />
+    <Resource Include="6\xiaxia.png" />
+    <Resource Include="6\xiaxia_.png" />
+    <Resource Include="6\xia_.png" />
+    <Resource Include="6\yijianhuishou.png" />
+    <Resource Include="6\yijianhuishou_.png" />
+    <Resource Include="6\youkai.png" />
+    <Resource Include="6\youkai_.png" />
+    <Resource Include="6\youxuan.png" />
+    <Resource Include="6\youxuan_.png" />
+    <Resource Include="6\youyou.png" />
+    <Resource Include="6\youyou_.png" />
+    <Resource Include="6\yuan.png" />
+    <Resource Include="6\yundongmoshi.png" />
+    <Resource Include="6\yundongmoshi_.png" />
+    <Resource Include="6\yunsuqianjin.png" />
+    <Resource Include="6\yunsuqianjin_.png" />
+    <Resource Include="6\yuntai-shang.png" />
+    <Resource Include="6\yuntai-shang_.png" />
+    <Resource Include="6\yuntai-xia.png" />
+    <Resource Include="6\yuntai-xia_.png" />
+    <Resource Include="6\yuntai-youxuan.png" />
+    <Resource Include="6\yuntai-youxuan_.png" />
+    <Resource Include="6\yuntai-zuoxuan.png" />
+    <Resource Include="6\yuntai-zuoxuan_.png" />
+    <Resource Include="6\yuntai.png" />
+    <Resource Include="6\yuyin.png" />
+    <Resource Include="6\yuyin_.png" />
+    <Resource Include="6\zhankai.png" />
+    <Resource Include="6\zhankai_.png" />
+    <Resource Include="6\zhanshitu_6.png" />
+    <Resource Include="6\zhuaquzhongwu.png" />
+    <Resource Include="6\zhuaquzhongwu_.png" />
+    <Resource Include="6\zidingyi.png" />
+    <Resource Include="6\zidingyi_.png" />
+    <Resource Include="6\zuobian.png" />
+    <Resource Include="6\zuokai.png" />
+    <Resource Include="6\zuokai_.png" />
+    <Resource Include="6\zuoxuan.png" />
+    <Resource Include="6\zuoxuan_.png" />
+    <Resource Include="6\zuozuo.png" />
+    <Resource Include="6\zuozuo_.png" />
+    <Resource Include="6\运动模式界面_画板 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="4\anniubeijing.png" />
+    <Resource Include="4\dengguang.png" />
+    <Resource Include="4\disu.png" />
+    <Resource Include="4\disu_.png" />
+    <Resource Include="4\gaosu.png" />
+    <Resource Include="4\gaosu_.png" />
+    <Resource Include="4\he.png" />
+    <Resource Include="4\he_.png" />
+    <Resource Include="4\houzhaoming.png" />
+    <Resource Include="4\houzhaoming_.png" />
+    <Resource Include="4\jiaquzhaoming.png" />
+    <Resource Include="4\jiaquzhaoming_.png" />
+    <Resource Include="4\kai.png" />
+    <Resource Include="4\kaiguan.png" />
+    <Resource Include="4\kaiguan_.png" />
+    <Resource Include="4\kai_.png" />
+    <Resource Include="4\luzhi_.png" />
+    <Resource Include="4\qianzhaoming.png" />
+    <Resource Include="4\qianzhaoming_.png" />
+    <Resource Include="4\quanjingzhaoming.png" />
+    <Resource Include="4\quanjingzhaoming_.png" />
+    <Resource Include="4\tingzhi_.png" />
+    <Resource Include="4\xiaobi_s.png" />
+    <Resource Include="4\xiaobi_s_.png" />
+    <Resource Include="4\xiaobi_x.png" />
+    <Resource Include="4\xiaobi_x_.png" />
+    <Resource Include="4\zhongsu.png" />
+    <Resource Include="4\zhongsu_.png" />
+    <Resource Include="4\抓取模式界面-第二版_画板 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="6\anniubeijing.png" />
+    <Resource Include="6\dengguang.png" />
+    <Resource Include="6\disu.png" />
+    <Resource Include="6\disu_.png" />
+    <Resource Include="6\gaosu.png" />
+    <Resource Include="6\gaosu_.png" />
+    <Resource Include="6\he.png" />
+    <Resource Include="6\he_.png" />
+    <Resource Include="6\houzhaoming.png" />
+    <Resource Include="6\houzhaoming_.png" />
+    <Resource Include="6\jiaquzhaoming.png" />
+    <Resource Include="6\jiaquzhaoming_.png" />
+    <Resource Include="6\kai.png" />
+    <Resource Include="6\kaiguan.png" />
+    <Resource Include="6\kaiguan_.png" />
+    <Resource Include="6\kai_.png" />
+    <Resource Include="6\luzhi_.png" />
+    <Resource Include="6\qianzhaoming.png" />
+    <Resource Include="6\qianzhaoming_.png" />
+    <Resource Include="6\quanjingzhaoming.png" />
+    <Resource Include="6\quanjingzhaoming_.png" />
+    <Resource Include="6\tingzhi_.png" />
+    <Resource Include="6\xiaobi_s.png" />
+    <Resource Include="6\xiaobi_s_.png" />
+    <Resource Include="6\xiaobi_x.png" />
+    <Resource Include="6\xiaobi_x_.png" />
+    <Resource Include="6\zhongsu.png" />
+    <Resource Include="6\zhongsu_.png" />
+    <Resource Include="6\运动模式界面-第二版_画板 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="4\shipinku.png" />
+    <Resource Include="4\shipinku_.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
